@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "install": "npm --prefix ./Lara install",
+    "dev": "PORT=3004 npm --prefix ./Lara run dev",
+    "stop": "pkill -f './Lara' || true"
+  }
+}
