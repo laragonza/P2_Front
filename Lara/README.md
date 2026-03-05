@@ -1,4 +1,4 @@
-
+P2
 
 
 cd ~/Practica2_Front/Lara
