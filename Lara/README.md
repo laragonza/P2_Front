@@ -3,9 +3,9 @@ P2
 
 cd ~/Practica2_Front/Lara
 npm install
-# arranco en el puerto 3004 (evita colisiones con otras instancias)
 PORT=3004 npm run dev
 
+En el 3004 para evitar colisiones
 
 La app quedará disponible en `http://localhost:3004`
 
