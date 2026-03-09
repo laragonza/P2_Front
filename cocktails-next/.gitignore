@@ -2,3 +2,10 @@
 /**/.env
 
 .DS_Store
+
+# Ignorar archivos generados de Next.js
+.next/
+
+# lockfiles
+package-lock.json
+
