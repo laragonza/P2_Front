@@ -1,0 +1,109 @@
+:root{
+  /* Paleta principal  */
+  --bg: #253042;
+  --card: #0b1220;
+  --accent: #ff9fb5; 
+  --muted: #9aa4b2;
+  --text: #e6eef6;
+  /* Alias en español */
+  --fondo: var(--bg);
+  --tarjeta: var(--card);
+  --acent: var(--accent);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  /* Fuente clara */
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#071226 0%, #0f1724 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{
+  padding:1.6rem 1rem; 
+  text-align:center;
+  border-bottom:1px solid rgba(151, 67, 172, 0.04);
+}
+.note{display:block}
+.site-header h1{margin:0;font-size:1.8rem}
+.subtitle{margin:6px 0 0;color:var(--muted)}
+.container{max-width:1100px;margin:2rem auto;padding:0 1rem}
+
+/* Grid de tarjetas */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+
+/* Tarjeta de cocktail (sutil, con sombra y bordes redondeados) */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+  padding:0;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 40px rgba(2,6,23,0.7);
+  border-color: rgba(255,255,255,0.06);
+}
+.card img{width:100%;height:160px;object-fit:cover;display:block}
+.card .body{padding:0.85rem}
+.card h3{margin:0;font-size:1rem}
+
+.tarjeta{ 
+  border-radius:12px;
+}
+
+/* pequeño ajuste: probé 11px y me gustó, dejo aquí por si quiero revertir */
+.card{border-radius:11px}
+
+/* Controles (buscador / botones) */
+.controls{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1rem}
+.btn{
+  background:var(--accent);
+  color:#0b0b0b;
+  border:none;
+  padding:.6rem .9rem;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.btn:hover{filter:brightness(.98);transform:translateY(-1px)}
+.btn:focus{outline:2px solid rgba(224,122,95,0.25);outline-offset:2px}
+
+.muted{color:var(--muted)}
+
+/* helper no usado - lo dejé por si acaso */
+.helper{display:block}
+
+/* Página de detalle */
+.detail{display:flex;gap:1.5rem;align-items:flex-start}
+.detail img{width:320px;border-radius:12px}
+.detail .meta{flex:1}
+.ingredients{margin-top:1rem;padding:.8rem;background:rgba(255,255,255,0.02);border-radius:10px}
+
+.site-footer{padding:1rem;text-align:center;color:var(--muted);font-size:0.9rem;border-top:1px solid rgba(255,255,255,0.02);margin-top:3rem}
+
+@media (max-width:720px){
+  .detail{flex-direction:column}
+}
+
+/* Botón rosita para volver  */
+.btn-back{
+  background: #ff9fb5; 
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(255,159,181,0.18);
+  margin-right: 12px;
+}
+.btn-back:hover{filter:brightness(.98);transform:translateY(-1px)}
+.btn-back:focus{outline:2px solid rgba(255,159,181,0.25);outline-offset:2px}
